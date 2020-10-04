@@ -13,6 +13,10 @@
 		9F472866252A6D5100AFD775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F472864252A6D5100AFD775 /* Main.storyboard */; };
 		9F472868252A6D5200AFD775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F472867252A6D5200AFD775 /* Assets.xcassets */; };
 		9F47286B252A6D5200AFD775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F472869252A6D5200AFD775 /* LaunchScreen.storyboard */; };
+		9F472879252A6DC100AFD775 /* ExtensionUivew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F472876252A6DC000AFD775 /* ExtensionUivew.swift */; };
+		9F47287A252A6DC100AFD775 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F472877252A6DC100AFD775 /* UILabel.swift */; };
+		9F47287B252A6DC100AFD775 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F472878252A6DC100AFD775 /* UIImageView.swift */; };
+		9F472886252A6FB800AFD775 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F472885252A6FB800AFD775 /* NetworkServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9F472867252A6D5200AFD775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F47286A252A6D5200AFD775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F47286C252A6D5200AFD775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F472876252A6DC000AFD775 /* ExtensionUivew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUivew.swift; sourceTree = "<group>"; };
+		9F472877252A6DC100AFD775 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		9F472878252A6DC100AFD775 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		9F472885252A6FB800AFD775 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		9F47285D252A6D5100AFD775 /* URL Session Show Progress */ = {
 			isa = PBXGroup;
 			children = (
+				9F472884252A6FA900AFD775 /* services */,
+				9F472875252A6DAA00AFD775 /* helpers */,
 				9F47285E252A6D5100AFD775 /* AppDelegate.swift */,
 				9F472860252A6D5100AFD775 /* SceneDelegate.swift */,
-				9F472862252A6D5100AFD775 /* ViewController.swift */,
+				9F47287D252A6DC500AFD775 /* controller */,
 				9F472864252A6D5100AFD775 /* Main.storyboard */,
 				9F472867252A6D5200AFD775 /* Assets.xcassets */,
 				9F472869252A6D5200AFD775 /* LaunchScreen.storyboard */,
 				9F47286C252A6D5200AFD775 /* Info.plist */,
 			);
 			path = "URL Session Show Progress";
+			sourceTree = "<group>";
+		};
+		9F472875252A6DAA00AFD775 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F472876252A6DC000AFD775 /* ExtensionUivew.swift */,
+				9F472878252A6DC100AFD775 /* UIImageView.swift */,
+				9F472877252A6DC100AFD775 /* UILabel.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		9F47287D252A6DC500AFD775 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F472862252A6D5100AFD775 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9F472884252A6FA900AFD775 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				9F472885252A6FB800AFD775 /* NetworkServices.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F47287A252A6DC100AFD775 /* UILabel.swift in Sources */,
+				9F472879252A6DC100AFD775 /* ExtensionUivew.swift in Sources */,
 				9F472863252A6D5100AFD775 /* ViewController.swift in Sources */,
 				9F47285F252A6D5100AFD775 /* AppDelegate.swift in Sources */,
+				9F472886252A6FB800AFD775 /* NetworkServices.swift in Sources */,
+				9F47287B252A6DC100AFD775 /* UIImageView.swift in Sources */,
 				9F472861252A6D5100AFD775 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hosam.net.URL-Session-Show-Progress";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hosam.net.URL-Session-Show-Progress";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
